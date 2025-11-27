@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Shuoqi Sun</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,7 +20,7 @@
 
         .container {
             display: flex;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -30,11 +29,11 @@
             width: 260px;
             padding: 40px 30px;
             border-right: 1px solid #eee;
+            background: #fafafa;
             box-sizing: border-box;
             position: sticky;
             top: 0;
             height: 100vh;
-            background: #fafafa;
         }
 
         .profile-pic {
@@ -53,16 +52,13 @@
             font-size: 14px;
             color: #666;
             margin-bottom: 20px;
+            line-height: 1.4;
         }
 
         .contact a {
             color: #0055aa;
             text-decoration: none;
             font-size: 14px;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
         }
 
         .contact div {
@@ -83,13 +79,13 @@
         /* 右侧内容 */
         .content {
             flex: 1;
-            padding: 40px 50px;
-            max-width: 780px;
+            padding: 40px 55px;
+            max-width: 800px;
             box-sizing: border-box;
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
             margin-top: 2em;
         }
@@ -98,6 +94,23 @@
             border: none;
             border-top: 1px solid #ddd;
             margin: 2em 0;
+        }
+
+        /* 折叠组件美化 */
+        details summary {
+            cursor: pointer;
+            padding: 6px 0;
+            font-size: 16px;
+        }
+
+        details summary:hover {
+            color: #0066cc;
+        }
+
+        details p {
+            margin: 10px 0 15px 0;
+            padding-left: 10px;
+            border-left: 2px solid #ddd;
         }
 
         /* 手机版 */
@@ -120,12 +133,16 @@
 
 <div class="container">
 
-    <!-- 左栏 -->
+    <!-- 左侧栏 -->
     <div class="sidebar">
         <img src="me.jpg" class="profile-pic">
 
         <div class="name">Shuoqi Sun</div>
-        <div class="tagline">Data Scientist · Economics + ML · Platform Governance</div>
+
+        <div class="tagline">
+            Data Scientist · Platform Incentives & Algorithmic Decision Systems<br>
+            Theory-informed applied modeling for real-world platforms
+        </div>
 
         <div class="contact">
             <div>Email: yourname [at] cmu.edu</div>
@@ -139,57 +156,210 @@
     <!-- 右侧内容 -->
     <div class="content">
 
-       <h2>About Me</h2>
-<p>
-    I am a data scientist with a PhD in Economics from Carnegie Mellon University. 
-    My work combines theoretical modeling with applied machine learning and causal inference 
-    to understand and optimize large-scale platform behaviors. I study how algorithms, incentives, 
-    and policy interventions shape outcomes in marketplaces, and I am especially interested in 
-    using these insights to improve platform decision systems in real-world environments.
-</p>
+        <!-- About Me -->
+        <h2>About Me</h2>
 
-<p>
-    Beyond research, I have hands-on industry experience at ByteDance/TikTok, Uber, and Duolingo, 
-    where I worked on experimentation, uplift modeling, ranking and recall systems, and policy evaluation 
-    using large-scale log data. My applied work is directly informed by the theoretical tools I use to 
-    reason about incentives, screening, and algorithmic design.
-</p>
+        <p>
+            I am a data scientist with a PhD in Economics from Carnegie Mellon University.
+            My work combines theoretical modeling with applied machine learning and causal inference 
+            to understand and optimize large-scale platform behaviors. I study how algorithms, incentives, 
+            and policy interventions shape outcomes in marketplaces, and I bring this perspective into 
+            practical decision-making in industry.
+        </p>
 
-<p>
-    Prior to my PhD, I completed my M.A. in Quantitative Methods (Data Science track) at Columbia University 
-    and my B.A. in Economics and Philosophy (mathematical logic track) at Peking University. 
-</p>
+        <p>
+            I have hands-on industry experience at ByteDance/TikTok, Uber, and Duolingo, where I worked on 
+            experimentation, uplift modeling, ranking and recall systems, and policy evaluation using 
+            large-scale log data. My applied work is informed by the theoretical tools I use to think 
+            about incentives, screening, and algorithmic design.
+        </p>
+
+        <p>
+            Before my PhD, I completed my M.A. in Quantitative Methods (Data Science track) at Columbia 
+            University and my B.A. in Economics and Philosophy at Peking University.
+            This background gave me strong foundations in quantitative analysis, formal reasoning, and 
+            structured problem solving.
+        </p>
+
         <hr>
-
+                <!-- Skills -->
         <h2>Skills</h2>
         <p>
-            <strong>Machine Learning:</strong> XGBoost, LightGBM, DNN recall models, ranking systems<br>
+            <strong>Machine Learning:</strong> XGBoost, LightGBM, DNN recall, ranking models, embedding-based retrieval<br>
             <strong>Causal Inference:</strong> A/B testing, diff-in-diff, causal forests, uplift modeling<br>
-            <strong>Data:</strong> SQL, Python, Hive, Spark, Airflow, large-scale log data<br>
-            <strong>Economics:</strong> platform design, pricing, mechanism design, game theory
+            <strong>Data & Engineering:</strong> SQL, Python, Hive, Spark, Airflow, large-scale log data<br>
+            <strong>Economics & Platforms:</strong> mechanism design, incentives, pricing, marketplace modeling
         </p>
 
         <hr>
 
-        <h2>Industry Projects</h2>
-        <p>
-            • Hybrid recall + ranking news recommendation system (300k users, 360k articles).<br>
-            • Governance uplift modeling at ByteDance/TikTok, improving enforcement ROI.<br>
-            • RL-based dynamic pricing model using NYC FHV trip data.<br>
-            • Duolingo user segmentation for monetization + engagement strategies.
-        </p>
+        <!-- Applied Industry Experience -->
+        <h2>Applied Industry Experience</h2>
+
+        <details open>
+          <summary><strong>Merchant Lifetime Forecasting & Governance Uplift Modeling @ ByteDance/TikTok</strong></summary>
+          <p>
+            Developed and deployed a multi-task causal ML system to forecast merchant lifetime and estimate 
+            uplift from governance-related experience costs, trained on multi-terabyte transaction-level data. 
+            Automated end-to-end daily data ingestion, retraining, and dashboard updates, improving forecast 
+            accuracy by about 10% and operationalizing predictions across millions of merchants. 
+            The project was selected for presentation at a company-wide e-commerce data science forum.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Strategy Impact Surface for Platform Governance</strong></summary>
+          <p>
+            Combined platform-scale A/B experimentation with causal-model insights to build a framework that 
+            quantifies the long-term ROI of governance policies. Mapped nonlinear trade-offs between user experience 
+            and seller retention and identified high-leverage governance intensities, informing policy decisions 
+            for product and operations teams.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Merchant Risk Modeling</strong></summary>
+          <p>
+            Engineered features capturing operational uncertainty and marketplace behavior to enhance TikTok’s 
+            merchant risk models; several features were adopted as production tags. Partnered with cross-functional 
+            teams to scope and design new data signals to support governance and enforcement decisions.
+          </p>
+        </details>
 
         <hr>
 
-        <h2>Research (Selected)</h2>
+        <!-- Selected Technical Projects -->
+        <h2>Selected Technical Projects</h2>
+
+        <details>
+          <summary><strong>Hybrid Recall + Ranking for News Recommendation</strong></summary>
+          <p>
+            Built a two-stage recommender system using public news datasets, combining ANN-based candidate retrieval 
+            with ML ranking models for 300k users and 360k articles. Demonstrates end-to-end recommender development, 
+            including feature engineering, model training, and evaluation.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Dynamic Pricing via Reinforcement Learning</strong></summary>
+          <p>
+            Developed a reinforcement learning environment using NYC For-Hire Vehicle trip data to simulate 
+            platform supply–demand dynamics. Trained pricing agents under uncertainty to optimize driver 
+            earnings, illustrating the use of RL for economic decision-making and policy optimization.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>User Segmentation</strong></summary>
+          <p>
+            Designed clustering-based user personas using behavioral logs and survey features. Identified 
+            segments linked to monetization and engagement differences, demonstrating experience with unsupervised 
+            learning and consumer analytics.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Agent-based Opinion & Relationship Dynamics</strong></summary>
+          <p>
+            Implemented a multi-agent simulation using hybrid and Facebook network data to model belief updating 
+            and relationship rewiring under ideological distance. Produced emergent patterns such as polarization 
+            and network fragmentation; early work that motivated my later interest in platform behavior.
+          </p>
+        </details>
+
+        <hr>
+
+        <!-- Selected Research -->
+        <h2>Selected Research</h2>
+
         <p>
-            • Algorithms at the Gate: platform governance and quality–variety trade-offs.<br>
-            • Privacy & Search Costs: personalization in competitive digital markets.
+            My research focuses on platform governance, algorithmic screening, and how incentives interact with 
+            automated decision systems. Below are a few representative projects.
         </p>
 
-    </div>
+        <details>
+          <summary><strong>Algorithms at the Gate</strong></summary>
+          <p>
+            A modeling framework for how platforms set screening thresholds, how commitment or non-commitment 
+            shapes seller incentives, and how automated screening trades off quality and variety. Provides 
+            intuition for how algorithmic decision systems behave when agents can respond strategically.
+          </p>
+        </details>
 
-</div>
+        <details>
+          <summary><strong>Privacy & Search Costs</strong></summary>
+          <p>
+            A theory of how personalization, consumer privacy choices, and price discrimination interact 
+            in competitive search markets. Offers insights into how information design and cookie policies 
+            affect user experience, prices, and marketplace efficiency.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Manipulable Signals</strong></summary>
+          <p>
+            Models how scoring algorithms respond when sellers can manipulate or game signal distributions, 
+            and how commitment or coarsening can mitigate gaming incentives while preserving useful variation 
+            in scores.
+          </p>
+        </details>
+
+        <hr>
+
+        <!-- Teaching & Communication -->
+        <h2>Teaching & Communication</h2>
+
+        <p>
+            I have taught across PhD, MBA, and undergraduate levels, gaining experience in explaining complex 
+            quantitative ideas clearly, mentoring teams, and communicating with diverse audiences.
+        </p>
+
+        <details>
+          <summary><strong>Instructor (PhD) — Math Camp</strong></summary>
+          <p>
+            Independently designed and taught a PhD Math Camp for incoming students over two years, covering 
+            mathematical analysis, linear algebra, probability, and mathematical statistics. Developed teaching 
+            plans, lecture materials, and assignments from scratch.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Teaching Assistant (PhD) — Econometrics & Game Theory</strong></summary>
+          <p>
+            Led office hours, prepared solution guides, and supported rigorous PhD coursework in econometrics 
+            and game theory, helping students navigate advanced statistical and strategic concepts.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Teaching Assistant (MBA) — Pricing Strategy</strong></summary>
+          <p>
+            Mentored MBA student teams on pricing and analytics projects, connecting economic intuition with 
+            product and business decisions.
+          </p>
+        </details>
+
+        <details>
+          <summary><strong>Head TA — Economics 101 (300 students)</strong></summary>
+          <p>
+            Managed a 7-member TA team, coordinated course logistics, delivered recitations, and oversaw 
+            the course discussion forum for a large undergraduate class.
+          </p>
+        </details>
+
+        <p><em>
+            Across these roles, I strengthened my communication, mentoring, and leadership skills—directly 
+            valuable in collaborative data science environments.
+        </em></p>
+
+        <hr>
+
+        <!-- Contact -->
+        <h2>Contact</h2>
+        <p>Email: yourname [at] cmu.edu</p>
+
+    </div> <!-- end .content -->
+</div> <!-- end .container -->
 
 </body>
 </html>
