@@ -2,110 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shuoqi Sun</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Shuoqi Sun</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            padding: 40px 20px;
-            font-family: "Times New Roman", serif;
-            line-height: 1.6;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
             color: #222;
             background: #fff;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.6;
         }
 
-        h1 {
-            font-size: 36px;
-            font-weight: normal;
-            margin-bottom: 0.2em;
+        .container {
+            display: flex;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        h2 {
-            font-size: 22px;
-            font-weight: normal;
-            margin-top: 2em;
-            margin-bottom: 0.6em;
+        /* 左侧栏 */
+        .sidebar {
+            width: 260px;
+            padding: 40px 30px;
+            border-right: 1px solid #eee;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            background: #fafafa;
         }
 
-        a {
+        .profile-pic {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 26px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
             color: #0055aa;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .contact div {
+            margin-bottom: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 12px;
+            background: #0055aa;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 14px;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        /* 右侧内容 */
+        .content {
+            flex: 1;
+            padding: 40px 50px;
+            max-width: 780px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 2em;
         }
 
         hr {
             border: none;
-            border-top: 1px solid #bbb;
+            border-top: 1px solid #ddd;
             margin: 2em 0;
         }
 
-        .subtitle {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 2em;
+        /* 手机版 */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Shuoqi Sun</h1>
-    <div class="subtitle">
-        Economics PhD · Platform Governance · Data Science
+<div class="container">
+
+    <!-- 左栏 -->
+    <div class="sidebar">
+        <img src="me.jpg" class="profile-pic">
+
+        <div class="name">Shuoqi Sun</div>
+        <div class="tagline">Data Scientist · Economics + ML · Platform Governance</div>
+
+        <div class="contact">
+            <div>Email: yourname [at] cmu.edu</div>
+            <div><a href="https://github.com/voidprove01" target="_blank">GitHub</a></div>
+            <div><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></div>
+        </div>
+
+        <a href="CV.pdf" class="button" target="_blank">Download CV</a>
     </div>
 
-    <p>
-        I am a final-year Economics PhD student at Carnegie Mellon University advised by Professor Ali.
-        My research studies platform governance, algorithmic screening, seller selection, and the economics
-        of AI. Methodologically, my work blends information economics, mechanism design, and industrial
-        organization with insights from modern digital platforms.
-    </p>
+    <!-- 右侧内容 -->
+    <div class="content">
 
-    <p>
-        I am also deeply interested in the intersection of economics and data science. My recent applied work
-        involves experimentation, causal inference, and large-scale modeling at technology companies such as
-        ByteDance/TikTok, Uber, and others. Beyond research, I enjoy building clean machine learning systems,
-        designing governance experiments, and analyzing marketplace dynamics.
-    </p>
+        <h2>About Me</h2>
+        <p>
+            I am a data scientist with a background in Economics (PhD, Carnegie Mellon University). 
+            I specialize in applying machine learning, causal inference, and marketplace economics 
+            to improve platform decision-making, governance, and user experience. 
+        </p>
 
-    <hr>
+        <p>
+            I am particularly interested in real-world problems involving platform quality, 
+            recommendation systems, seller selection, incentive design, and algorithmic fairness. 
+            I have practical experience at ByteDance/TikTok, Uber, and Duolingo working on  
+            experimentation, uplift modeling, and large-scale ML systems.
+        </p>
 
-    <h2>Research</h2>
-    <p>
-        • <strong>Algorithms at the Gate:</strong> A theory of platform governance, algorithmic thresholds, and the quality–variety
-        frontier under commitment and no-commitment.<br>
-        • <strong>Privacy and Search Costs:</strong> How consumer privacy choices interact with price discrimination and platform
-        personalization in competitive search markets.<br>
-        • <strong>Screening under Manipulable Signals:</strong> A model of algorithmic screening when sellers can manipulate the score
-        distribution through costly effort.
-    </p>
+        <hr>
 
-    <hr>
+        <h2>Skills</h2>
+        <p>
+            <strong>Machine Learning:</strong> XGBoost, LightGBM, DNN recall models, ranking systems<br>
+            <strong>Causal Inference:</strong> A/B testing, diff-in-diff, causal forests, uplift modeling<br>
+            <strong>Data:</strong> SQL, Python, Hive, Spark, Airflow, large-scale log data<br>
+            <strong>Economics:</strong> platform design, pricing, mechanism design, game theory
+        </p>
 
-    <h2>Selected Projects</h2>
-    <p>
-        • <strong>Two-stage news recommendation system</strong> (recall + ranking) for 300k users and 360k articles.<br>
-        • <strong>Lift-in-experience-cost modeling</strong> for e-commerce governance at ByteDance/TikTok.<br>
-        • <strong>Dynamic pricing via reinforcement learning</strong> using NYC For-Hire Vehicle trip data.<br>
-        • <strong>User segmentation for Duolingo</strong> using K-means on behavioral and survey features.
-    </p>
+        <hr>
 
-    <hr>
+        <h2>Industry Projects</h2>
+        <p>
+            • Hybrid recall + ranking news recommendation system (300k users, 360k articles).<br>
+            • Governance uplift modeling at ByteDance/TikTok, improving enforcement ROI.<br>
+            • RL-based dynamic pricing model using NYC FHV trip data.<br>
+            • Duolingo user segmentation for monetization + engagement strategies.
+        </p>
 
-    <h2>Contact</h2>
-    <p>
-        Email: yourname [at] cmu.edu <br>
-        GitHub: <a href="https://github.com/your_github" target="_blank">github.com/your_github</a><br>
-        CV: <a href="CV.pdf" target="_blank">PDF</a>
-    </p>
+        <hr>
+
+        <h2>Research (Selected)</h2>
+        <p>
+            • Algorithms at the Gate: platform governance and quality–variety trade-offs.<br>
+            • Privacy & Search Costs: personalization in competitive digital markets.
+        </p>
+
+    </div>
+
+</div>
 
 </body>
 </html>
