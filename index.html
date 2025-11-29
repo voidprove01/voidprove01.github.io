@@ -191,11 +191,10 @@
         <details open>
           <summary><strong>Merchant Lifetime Forecasting & Governance Uplift Modeling @ ByteDance</strong></summary>
           <p>
-            Developed and deployed a multi-task causal ML system to forecast merchant lifetime and estimate 
+            Developed and deployed a multi-task ML system to forecast merchant lifetime and estimate 
             uplift of experience-related costs, trained on multi-terabyte transaction-level data. 
             Automated end-to-end daily data ingestion, retraining, and dashboard updates, improving forecast 
             accuracy by about 10% and operationalizing predictions across millions of merchants. 
-            The project was selected for presentation at a company-wide e-commerce data science forum.
           </p>
         </details>
 
@@ -237,7 +236,7 @@
         <details>
   <summary><strong>Does Better Recommendation Lead to Faster Sales? Evidence from a C2C E-commerce Platform (Work in Progress)</strong></summary>
   <p>
-    Developing embedding-based item similarity metrics and a recommendation density index to study how candidate retrieval quality shapes marketplace outcomes. 
+    This paper develops embedding-based item similarity metrics and a recommendation density index to study how candidate retrieval quality shapes marketplace outcomes. 
     Disentangles acceleration and comparison-shopping effects by leveraging heterogeneity in price elasticity, and models time-to-sale dynamics using item-level conversion and hazard models.  </p>
 </details>
         <hr>
@@ -291,14 +290,15 @@
         <h2>Selected Technical Projects</h2>
 
         <details>
-          <summary><strong>A Two-Stage News Recommendation System</strong></summary>
-          <p>
-            Built a two-stage recommender system using public news datasets, combining ANN-based candidate retrieval 
-            with ML ranking models for 300k users and 360k articles. Demonstrates end-to-end recommender development, 
-            including feature engineering, model training, and evaluation.
-          </p>
-        </details>
-<details>
+  <summary><strong>Two-Stage Recommendation System: ANN Retrieval and Learning-to-Rank</strong></summary>
+  <p>
+    Built a two-stage recommendation pipeline combining embedding-based candidate retrieval with a supervised
+    ranking model. Implemented ANN similarity search to retrieve high-quality user–item candidates at scale, and 
+    trained a feature-rich learning-to-rank model to re-rank articles for 300K+ users and 360K+ items. Improved 
+    recommendation relevance by integrating user histories, content embeddings, and interaction features.
+  </p>
+</details>
+        <details>
           <summary><strong>Agent-based Modelling of Opinion & Relationship Dynamics</strong></summary>
           <p>
             This project developed and implemented a multi-agent simulated system on hybrid and Facebook network data to model belief updating and relationship rewiring as ideological distance changes. Demonstrated emergent social dynamics—including polarization, homophily, and network fragmentation—that later motivated my interest in user and network dynamics on large-scale social platforms.          </p>
