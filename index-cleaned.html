@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shuoqi Sun</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --text: #1f1f1f;
+      --muted: #666;
+      --line: #e8e8e8;
+      --accent: #1f4f8f;
+      --accent-dark: #173b69;
+      --bg-soft: #fafafa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .sidebar {
+      width: 250px;
+      padding: 36px 28px;
+      border-right: 1px solid var(--line);
+      background: var(--bg-soft);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .profile-pic {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .name {
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+      margin-bottom: 18px;
+    }
+
+    .contact div {
+      margin-bottom: 8px;
+    }
+
+    .contact a,
+    .button,
+    .paper-title,
+    .teaching-link {
+      transition: all 0.15s ease;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 8px 12px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+    }
+
+    .content {
+      flex: 1;
+      max-width: 820px;
+      padding: 36px 52px;
+    }
+
+    h2 {
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0 0 1rem 0;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.35rem 0;
+    }
+
+    p {
+      margin: 0 0 0.9rem 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 1.8rem 0;
+    }
+
+    .research-item,
+    .project-item,
+    .experience-item,
+    .teaching-item {
+      margin-bottom: 1.35rem;
+    }
+
+    .research-item p,
+    .project-item p,
+    .experience-item p,
+    .about p {
+      max-width: 72ch;
+      font-size: 14px;
+      line-height: 1.52;
+      color: #333;
+    }
+
+    .paper-title {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .paper-title:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .teaching-list {
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .teaching-item {
+      line-height: 1.45;
+    }
+
+    .teaching-role {
+      font-weight: 500;
+    }
+
+    .teaching-link {
+      margin-left: 8px;
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .teaching-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .section-intro {
+      max-width: 72ch;
+      font-size: 14px;
+      line-height: 1.52;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .content {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="me_square.jpg" class="profile-pic" alt="Portrait of Shuoqi Sun">
+
+      <div class="name">Shuoqi Sun</div>
+
+      <div class="tagline">
+        Data Scientist · Economist · Understanding platforms through data and incentives.
+      </div>
+
+      <div class="contact">
+        <div><a href="https://github.com/voidprove01" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+        <div><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+      </div>
+
+      <a href="CV.pdf" class="button" target="_blank" rel="noopener noreferrer">Download CV</a>
+    </div>
+
+    <div class="content">
+      <section class="about">
+        <h2>About Me</h2>
+
+        <p>
+          Welcome! I hold a PhD in Economics from Carnegie Mellon University, Tepper School of Business. Before that, I received a BA in Philosophy from Peking University and an MA in Quantitative Methods in the Social Sciences from Columbia University.
+        </p>
+
+        <p>
+          My work combines economic theory with applied machine learning and causal inference to study how algorithms and incentives shape outcomes in digital marketplaces. I bring this perspective into practical decision-making in industry. I interned on ByteDance’s E-Commerce Governance &amp; Experience team, where I worked on large-scale experimentation, uplift modeling, and policy evaluation using platform log data.
+        </p>
+
+        <p>
+          I'm currently on the job market and actively looking for Data / Applied Scientist roles in tech.
+        </p>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Research</h2>
+
+        <div class="research-item">
+          <h3>
+            <a href="https://voidprove01.github.io/assets/Privacy.pdf" target="_blank" rel="noopener noreferrer" class="paper-title">
+              Privacy Choices in Personalized Search Markets
+            </a>
+          </h3>
+          <p>
+            This paper examines consumers’ incentives to give up data in exchange for better personalization in a competitive search marketplace. The platform acts as an information intermediary, personalizing the consumer search environment with user consent. Consumers, heterogeneous in search costs, face a trade-off: enabling cookies helps them find better matches, but also shapes the degree of price competition among sellers in ways that may harm consumers. I show that a no-privacy regime can improve match efficiency, expand market demand, and, despite its ambiguous effect on equilibrium prices, a platform should enable cookies for everyone while pooling consumers’ cost types to maximize welfare. When privacy choice is left to consumers, however, a separating equilibrium may arise in which low-search-cost consumers remain anonymous to distinguish themselves from high-search-cost consumers. Compared with the consumer-optimal outcome, almost all consumers are worse off, suggesting that consent-based privacy regulation may generate unintended welfare losses.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>
+            <a href="https://voidprove01.github.io/assets/Selling.pdf" target="_blank" rel="noopener noreferrer" class="paper-title">
+              Selling a New Product to the Crowd: A Mechanism Design Approach
+            </a>
+          </h3>
+          <p>
+            This paper studies a monopolist selling a common-value product to buyers who privately observe independent signals. The seller commits to a mechanism that elicits information from buyers, chooses what to disclose, and sets prices. I show that any mechanism involving private, buyer-specific communication can be replicated—and weakly improved—by a single public disclosure. Under Bayesian incentive compatibility, the optimal mechanism reduces to posted pricing with threshold allocation; a dominant-strategy implementation arises through leave-one-out transfer schemes. I also identify economically relevant settings in which coarse information disclosure becomes strictly optimal despite the absence of capacity constraints.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Consumer Search, Comparison Frictions, and Conversion Timing in Marketplace Browsing (WIP)</h3>
+          <p>
+            Using clickstream data from a secondhand marketplace, I study how users sequentially discover items before purchase. A central question is whether narrowing into a cluster of very similar products helps users find what they want faster, or instead creates comparison frictions that delay conversion. The project combines behavioral modeling, simulation, and marketplace intuition to analyze search depth, stopping decisions, and product discovery quality.
+          </p>
+        </div>
+      </section>
+
+      <hr>
+
+      <section class="teaching-section">
+        <h2>Teaching</h2>
+
+        <div class="teaching-list">
+          <div class="teaching-item">
+            <span class="teaching-role">Instructor (PhD) — Math Camp</span>
+            <a href="https://github.com/voidprove01/math-camp" target="_blank" rel="noopener noreferrer" class="teaching-link">[course site]</a>
+          </div>
+
+          <div class="teaching-item">
+            <span class="teaching-role">Teaching Assistant (PhD) — Econometrics &amp; Game Theory</span>
+          </div>
+
+          <div class="teaching-item">
+            <span class="teaching-role">Teaching Assistant (MBA) — Pricing Strategy &amp; Strategies in Information Markets</span>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Technical Projects</h2>
+
+        <p class="section-intro">
+          A selection of technical projects spanning causal inference, simulation-based evaluation, and AI-assisted analytical workflows.
+        </p>
+
+        <div class="project-item">
+          <h3>LLM-assisted experiment diagnostics and reporting agent</h3>
+          <p>
+            Built a Python toolkit for automated diagnostics of large-scale online experiments, supporting SRM detection, covariate balance checks, treatment effect estimation, and bootstrap-based uncertainty quantification. Developed an LLM-assisted analysis agent that synthesizes experiment diagnostics, summarizes treatment effects, and generates structured investigation reports to accelerate experiment interpretation and data-driven decision making.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <h3>Estimating long-term treatment effects under persistent interventions</h3>
+          <p>
+            Built a simulation framework to compare benchmark estimators for long-term treatment effects in settings with ongoing treatment exposure. Analyzed when surrogate-index methods underperform relative to sequential approaches, and how performance depends on treatment dynamics, proxy quality, and the relationship between short-term and long-term outcomes.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <h3>
+            <a href="https://voidprove01.github.io/assets/ABM.pdf" target="_blank" rel="noopener noreferrer" class="paper-title">
+              Dynamics of Belief and Relationship Co-evolution on Social Networks
+            </a>
+          </h3>
+          <p>
+            This paper develops an agent-based model to study the co-evolution of opinions and social ties in dynamic networks. Simulations on real-world social networks, including Facebook ego data, show that global consensus is robust to network structure at high tolerance levels, while low tolerance leads to endogenous polarization and social segregation even in well-connected networks.
+          </p>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Applied Industry Experience</h2>
+
+        <div class="experience-item">
+          <h3>Merchant Lifetime Prediction &amp; Uplift Evaluation of GnE Cost @ ByteDance</h3>
+          <p>
+            Developed and deployed a unified ML modeling framework to forecast merchant lifetime and estimate causal impact of experience-related costs, trained on multi-terabyte transaction-level data. Automated daily data ingestion, retraining, and dashboard updates, improving forecast accuracy by about 10% and supplying key inputs to an ROI framework for evaluating long-term merchant outcomes and governance strategies.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <h3>Strategy Impact Surface for Platform Governance @ ByteDance</h3>
+          <p>
+            Combined platform-scale A/B experimentation with causal-model insights to build a framework for quantifying the long-term ROI of governance policies. Estimated an upper bound of governance intensity beyond which long-term GMV loss is likely, providing quantitative guardrails for sustainable strategy design.
+          </p>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Email: shuoqis.pku [at] gmail.com</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
